@@ -17,6 +17,10 @@ public class Main {
 
         System.out.println(voiture1.couleur);
 
-        Voiture Voiture2 = new Voiture("Rouge", 0, 1500);
+        Voiture voiture2 = new Voiture("Rouge", 0, 1500);
+
+        double chevauxFiscaux = voiture2.puissanceChevauxFiscaux();
+        System.out.println(voiture2.toString());
+        System.out.println(voiture2);
     }
 }

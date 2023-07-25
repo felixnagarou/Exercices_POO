@@ -46,6 +46,18 @@ public class Voiture {
         return puisssance / 7.;
     }
 
+    @Override
+    public String toString() {
+        return "Voiture{" +
+                "couleur='" + couleur + '\'' +
+                ", carburant=" + carburant +
+                ", puisssance=" + puisssance +
+                ", marque='" + marque + '\'' +
+                ", nombrePortes=" + nombrePortes +
+                '}';
+    }
+
+
     //protected void finalize() {
 
     //}
