@@ -42,5 +42,13 @@ public class Voiture {
         carburant += volume;
     }
 
+    public double puissanceChevauxFiscaux(){
+        return puisssance / 7.;
+    }
+
+    //protected void finalize() {
+
+    //}
+
 
 }
