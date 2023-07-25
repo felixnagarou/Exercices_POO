@@ -30,4 +30,17 @@ public class Voiture {
         this.carburant = carburant;
         this.puisssance = puisssance;
     }
+    public void demarrer(){
+        System.out.println("La voiture démarre");
+    }
+
+    public void freiner(){
+        System.out.println("La voiture freine");
+    }
+
+    public void remplirReservoir(int volume) {
+        carburant += volume;
+    }
+
+
 }
