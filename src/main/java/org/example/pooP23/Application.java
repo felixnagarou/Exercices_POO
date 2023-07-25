@@ -17,7 +17,6 @@ public class Application {
                 System.out.println("Le joueur " + gamer1.getName() +
                        " passe au niveau " + gamer1.getLevel());
             }
-
         }
         gamer1.displayStat();
     }
