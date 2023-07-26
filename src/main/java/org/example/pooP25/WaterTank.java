@@ -21,6 +21,7 @@ public class WaterTank {
         if (fillVolume <= (maxCapacity - fillLevel)){
             this.fillLevel += fillVolume;
             WaterTank.totalVolume += fillVolume;
+
         }
     }
 
@@ -29,7 +30,6 @@ public class WaterTank {
             this.fillLevel -= emptyVolume;
             WaterTank.totalVolume -= emptyVolume;
         }
-
     }
     //-----------------------------------------------------------
 
