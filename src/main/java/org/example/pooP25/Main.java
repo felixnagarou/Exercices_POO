@@ -14,7 +14,7 @@ public class Main {
 
 
 
-        tank1.fill(30);
+        tank1.fill(130);
         tank2.empty(1);
 
         tank1.displayStats();
