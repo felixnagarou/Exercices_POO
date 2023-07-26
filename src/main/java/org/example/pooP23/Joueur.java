@@ -55,16 +55,12 @@ public class Joueur {
     }
 
     public void doQuest(){
-        experiencePoints += 10;
-
-
-
-
+        this.experiencePoints += 10;
 
     }
     public void levelUp(){
             this.level++;
-        experiencePoints = 0;
+        this.experiencePoints = 0;
     }
 
 

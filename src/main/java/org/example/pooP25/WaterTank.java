@@ -4,7 +4,7 @@ public class WaterTank {
     private float hollowWeight;
     private float maxCapacity;
     private float fillLevel;
-    private static float totalVolume;
+    public static float totalVolume = 0;
 
     public WaterTank(){
     }
@@ -13,59 +13,26 @@ public class WaterTank {
         this.hollowWeight = hollowWeight;
         this.maxCapacity = maxCapacity;
         this.fillLevel = fillLevel;
-
-
+        totalVolume += fillLevel;
     }
 
-    //getters
-
-    public float getHollowWeight() {
-        return hollowWeight;
+    //méthodes remplir et vider -------------------------------------------------
+    public void fill(float fillVolume){
+        if (fillVolume <= (maxCapacity - fillLevel)){
+            this.fillLevel += fillVolume;
+            WaterTank.totalVolume += fillVolume;
+        }
     }
 
-    public float getMaxCapacity() {
-        return maxCapacity;
-    }
-
-    public float getFillLevel() {
-        return fillLevel;
-    }
-
-    public static float getTotalVolume(){
-        return totalVolume;
+    public void empty(float emptyVolume){
+        if (emptyVolume <= this.fillLevel && emptyVolume >= 0) {
+            this.fillLevel -= emptyVolume;
+            WaterTank.totalVolume -= emptyVolume;
+        }
 
     }
+    //-----------------------------------------------------------
 
-    //setters
-
-
-    public void setHollowWeight(float hollowWeight) {
-        this.hollowWeight = hollowWeight;
-    }
-
-    public void setMaxCapacity(float maxCapacity) {
-        this.maxCapacity = maxCapacity;
-    }
-
-    public void setFillLevel(float fillLevel) {
-        this.fillLevel = fillLevel;
-    }
-
-    public static void setTotalVolume(float totalVolume) {
-        WaterTank.totalVolume = totalVolume;
-    }
-
-    //méthodes remplir et vider
-
-    public float fill(float fillVolume){
-        fillLevel += fillVolume;
-        return fillLevel;
-    }
-
-    public float empty(float emptyVolume){
-        fillLevel -= emptyVolume;
-        return fillLevel;
-    }
 
     @Override
     public String toString() {
