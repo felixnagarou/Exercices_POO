@@ -18,17 +18,28 @@ public class WaterTank {
 
     //méthodes remplir et vider -------------------------------------------------
     public void fill(float fillVolume){
-        if (fillVolume <= (maxCapacity - fillLevel)){
-            this.fillLevel += fillVolume;
+        if (fillVolume <= (maxCapacity - fillLevel) && fillVolume >= 0){
+            fillLevel += fillVolume;
             WaterTank.totalVolume += fillVolume;
-
+        }
+        else {
+            if (fillVolume >= 0) {
+                WaterTank.totalVolume += (maxCapacity - fillLevel);
+                fillLevel = maxCapacity;
+            }
         }
     }
 
     public void empty(float emptyVolume){
-        if (emptyVolume <= this.fillLevel && emptyVolume >= 0) {
-            this.fillLevel -= emptyVolume;
+        if (emptyVolume <= fillLevel && emptyVolume >= 0) {
+            fillLevel -= emptyVolume;
             WaterTank.totalVolume -= emptyVolume;
+        }
+        else {
+            if (emptyVolume >= 0) {
+                WaterTank.totalVolume -= fillLevel;
+                fillLevel = 0;
+            }
         }
     }
     //-----------------------------------------------------------
