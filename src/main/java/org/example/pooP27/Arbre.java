@@ -10,9 +10,6 @@ public class Arbre extends Plante {
 
     @Override
     public String toString(){
-
         return super.toString() + "\n"  + "La circonférence de l'arbre est de : " + circumference + " m";
     }
-
-
 }
