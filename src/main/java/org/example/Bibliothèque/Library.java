@@ -33,9 +33,5 @@ public class Library {
         for (Livre livre : library1) {
             livre.displayBookInfo();
         }
-
-
-
-
     }
 }
