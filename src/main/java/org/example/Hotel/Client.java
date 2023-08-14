@@ -4,13 +4,12 @@ import java.util.HashMap;
 import java.util.TreeMap;
 
 public class Client {
-    //private HashMap<Integer, String> idClientList = new HashMap<>();
-    private int idClient;
+    private String idClient;
     private String name;
     private String firstName;
     private String phoneNumber;
 
-    public Client(int idClient, String name, String firstName, String phoneNumber) {
+    public Client(String idClient, String name, String firstName, String phoneNumber) {
         this.idClient = idClient;
         this.name = name;
         this.firstName = firstName;
@@ -18,11 +17,11 @@ public class Client {
 
     }
 
-    public int getIdClient() {
+    public String getIdClient() {
         return idClient;
     }
 
-    public void setIdClient(int idClient) {
+    public void setIdClient(String idClient) {
         this.idClient = idClient;
     }
 
