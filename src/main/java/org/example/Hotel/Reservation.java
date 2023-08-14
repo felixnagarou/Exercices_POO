@@ -16,4 +16,38 @@ public class Reservation {
         this.client = client;
     }
 
+    public int getIdReservation() {
+        return idReservation;
+    }
+
+    public void setIdReservation(int idReservation) {
+        this.idReservation = idReservation;
+    }
+
+    public boolean isReservationStatus() {
+        return reservationStatus;
+    }
+
+    public void setReservationStatus(boolean reservationStatus) {
+        this.reservationStatus = reservationStatus;
+    }
+
+    public ArrayList<Chambre> getRoomList() {
+        return roomList;
+    }
+
+    public void setRoomList(ArrayList<Chambre> roomList) {
+        this.roomList = roomList;
+    }
+
+    public int getClient() {
+        return client;
+    }
+
+    public void setClient(int client) {
+        this.client = client;
+    }
+
+
+
 }
